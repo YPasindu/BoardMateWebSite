@@ -438,8 +438,8 @@ letter-spacing: 1px;
 
 .recently-viewed-section h3 {
   margin-bottom: 8px;
-  font-size: 1.1rem; /* smaller heading */
-  font-weight: 600;
+  font-size: 1.1rem; 
+  font-weight: bold; 
   text-align: center;
 }
 
