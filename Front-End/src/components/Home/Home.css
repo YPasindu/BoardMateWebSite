@@ -454,8 +454,8 @@ letter-spacing: 1px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 140px;             /* Reduced width */
-  min-height: 220px;        /* Uniform height */
+  width: 40px;             /* Reduced width */
+  min-height: 20px;        /* Uniform height */
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
