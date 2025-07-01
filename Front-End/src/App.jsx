@@ -184,6 +184,7 @@ function App() {
       {/* Add Loader component */}
       <Loader />
       <ToastContainer />
+      <Footer />
     </>
   );
 }
