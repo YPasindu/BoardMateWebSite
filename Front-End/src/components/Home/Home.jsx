@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { Eye, RotateCw, Search, Star, Users } from "lucide-react";
 import apiService from "../../services/api-service";
 import { getImage } from "../../utils/image-resolver";
+import RecentlyViewedProperties from './RecentlyViewedProperties';
 
 function Home() {
   const navigate = useNavigate();
@@ -167,6 +168,8 @@ function Home() {
           </div>
         </div>
       </div>
+
+      <RecentlyViewedProperties />
 
       <div className="mostviewed-props">
         {propertyData && propertyData.length === 0 ? (
