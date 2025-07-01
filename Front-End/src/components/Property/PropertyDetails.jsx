@@ -27,7 +27,17 @@ const PropertyDetails = () => {
   // Fetch property data on initial render
   useEffect(() => {
     fetchProperty();
-  }, [])
+    // Add property to recently viewed in localStorage
+    if (propertyId) {
+      let viewed = JSON.parse(localStorage.getItem('recentlyViewedProperties')) || [];
+      // Remove if already exists to avoid duplicates
+      viewed = viewed.filter(id => id !== propertyId);
+      viewed.unshift(propertyId); // Add to start
+      // Limit to last 5 viewed
+      if (viewed.length > 5) viewed = viewed.slice(0, 5);
+      localStorage.setItem('recentlyViewedProperties', JSON.stringify(viewed));
+    }
+  }, [propertyId]);
 
   // Fetch reviews and average rating when property ID is available 
   useEffect(() => {
