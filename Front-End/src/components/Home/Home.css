@@ -451,7 +451,7 @@ letter-spacing: 1px;
 }
 
 .recently-viewed-list .property-card {
-  width: 140px !important;   /* smaller width */
+  width: 140px !important;  
   min-height: 180px !important;
   max-width: 150px;
   margin: 0;
