@@ -430,33 +430,35 @@ letter-spacing: 1px;
 }
 
 .recently-viewed-section {
-  margin: 32px 0;
-  padding: 16px;
-  background:  #d3d5d6 !important;
+  margin: 16px 0; /* Reduced from 32px */
+  padding: 8px;   /* Reduced from 16px */
+  background: #d3d5d6 !important;
   border-radius: 12px;
 }
 
 .recently-viewed-section h3 {
-  margin-bottom: 16px;
+  margin-bottom: 8px; /* Reduced from 16px */
   font-size: 1.2rem;
   font-weight: 600;
+  text-align: center;
 }
 
 .recently-viewed-list {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  justify-content: center; /* Optional: centers cards */
 }
 
 .recently-viewed-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100px;         /* Reduced from 150px */
+  width: 180px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  padding: 8px;         /* Reduced from 12px */
+  padding: 8px; /* Reduced from 12px */
   text-decoration: none;
   color: inherit;
   transition: box-shadow 0.2s;
@@ -468,13 +470,12 @@ letter-spacing: 1px;
 
 .recently-viewed-item img {
   width: 100%;
-  height: 60px;         /* Reduced from 100px */
+  height: 100px;
   object-fit: cover;
   border-radius: 6px;
-  margin-bottom: 6px;   /* Reduced from 8px */
+  margin-bottom: 8px;
 }
 
 .recently-viewed-item div {
   text-align: center;
-  font-size: 0.85rem;   /* Optional: make text smaller */
 }
