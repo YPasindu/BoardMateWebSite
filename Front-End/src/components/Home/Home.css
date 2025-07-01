@@ -430,14 +430,14 @@ letter-spacing: 1px;
 }
 
 .recently-viewed-section {
-  margin: 16px 0; /* Reduced from 32px */
-  padding: 8px;   /* Reduced from 16px */
+  margin: 16px 0;
+  padding: 8px;
   background: #d3d5d6 !important;
   border-radius: 12px;
 }
 
 .recently-viewed-section h3 {
-  margin-bottom: 8px; /* Reduced from 16px */
+  margin-bottom: 8px;
   font-size: 1.2rem;
   font-weight: 600;
   text-align: center;
@@ -445,23 +445,25 @@ letter-spacing: 1px;
 
 .recently-viewed-list {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
-  justify-content: center; /* Optional: centers cards */
+  justify-content: center;
 }
 
 .recently-viewed-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 180px;
+  width: 140px;             /* Reduced width */
+  min-height: 220px;        /* Uniform height */
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  padding: 8px; /* Reduced from 12px */
+  padding: 6px;
   text-decoration: none;
   color: inherit;
   transition: box-shadow 0.2s;
+  font-size: 0.85rem;
 }
 
 .recently-viewed-item:hover {
@@ -470,10 +472,10 @@ letter-spacing: 1px;
 
 .recently-viewed-item img {
   width: 100%;
-  height: 100px;
+  height: 80px;             /* Reduced image height */
   object-fit: cover;
   border-radius: 6px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .recently-viewed-item div {
