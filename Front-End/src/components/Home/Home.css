@@ -445,7 +445,7 @@ letter-spacing: 1px;
 
 .recently-viewed-list {
   display: flex;
-  gap: 12px;
+  gap: 12px; /* smaller gap between cards */
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -454,16 +454,15 @@ letter-spacing: 1px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 40px;             /* Reduced width */
-  min-height: 20px;        /* Uniform height */
+  width: 140px; /* was 180px */
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  padding: 6px;
+  padding: 6px; /* was 8px */
   text-decoration: none;
   color: inherit;
   transition: box-shadow 0.2s;
-  font-size: 0.85rem;
+  font-size: 0.85rem; /* optional: smaller text */
 }
 
 .recently-viewed-item:hover {
@@ -472,7 +471,7 @@ letter-spacing: 1px;
 
 .recently-viewed-item img {
   width: 100%;
-  height: 80px;             /* Reduced image height */
+  height: 80px; /* was 100px */
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 6px;
