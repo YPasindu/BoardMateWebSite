@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import apiService from '../../services/api-service';
 import { Link } from 'react-router-dom';
+import { X } from 'lucide-react'; // Add this for a close/delete icon
 
 const RecentlyViewedProperties = () => {
   const [properties, setProperties] = useState([]);
+
+  const removeProperty = (id) => {
+    // Remove from localStorage
+    const ids = JSON.parse(localStorage.getItem('recentlyViewedProperties')) || [];
+    const newIds = ids.filter(pid => pid !== id);
+    localStorage.setItem('recentlyViewedProperties', JSON.stringify(newIds));
+    // Remove from state
+    setProperties(prev => prev.filter(p => p.id !== id));
+  };
 
   useEffect(() => {
     const fetchRecentlyViewed = async () => {
@@ -30,9 +40,29 @@ const RecentlyViewedProperties = () => {
           <div
             key={property.id}
             className="property-card"
-            style={{ width: 220, cursor: "pointer" }}
-            onClick={() => window.location.href = `/property/${property.id}`}
+            style={{ width: 220, cursor: "pointer", position: "relative" }}
           >
+            {/* Delete Button */}
+            <button
+              style={{
+                position: "absolute",
+                top: 4,
+                right: 4,
+                background: "rgba(255,255,255,0.8)",
+                border: "none",
+                borderRadius: "50%",
+                cursor: "pointer",
+                zIndex: 2,
+                padding: 2
+              }}
+              title="Remove"
+              onClick={e => {
+                e.stopPropagation();
+                removeProperty(property.id);
+              }}
+            >
+              <X size={16} />
+            </button>
             <img src={(property.images && property.images[0]) || '/fallback-property.jpg'} alt={property.title} style={{margin: 0}}/>
             <div className="property-info">
               <h3>{property.title}</h3>
