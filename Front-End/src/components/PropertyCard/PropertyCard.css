@@ -53,6 +53,6 @@
 .property-info .rating {
     margin-top: 4px;
     font-size: 1rem;
-    color: #ffb400;
+    color: red; /* Change to red for testing */
     font-weight: 500;
 }
